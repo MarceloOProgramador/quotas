@@ -1,8 +1,6 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { QuotasService } from '../use-cases/quotas.service';
-import { CreateQuotaDto } from '../quotas/dto/create-quota.dto';
-import { UpdateQuotaDto } from '../quotas/dto/update-quota.dto';
-
+import {CreateQuotaDto}
 @Controller('quotas')
 export class QuotasController {
   constructor(private readonly quotasService: QuotasService) {}

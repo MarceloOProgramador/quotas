@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { QuotasModule } from '../modules/domain/quotas/quotas.module';
+import { QuotasModule } from '../modules/quotas.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 

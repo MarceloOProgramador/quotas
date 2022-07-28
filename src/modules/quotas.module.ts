@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { QuotasService } from './quotas.service';
-import { QuotasController } from './quotas.controller';
+import { QuotasService } from '../use-cases/quotas.service';
+import { QuotasController } from '../controllers/quotas.controller';
 
 @Module({
   controllers: [QuotasController],
