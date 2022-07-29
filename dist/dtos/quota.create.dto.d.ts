@@ -1,11 +1,10 @@
-export type CreateQuotaDto = {
+export declare type CreateQuotaDto = {
     value: number;
     description: string;
     count_title: number;
-}
-
-export type UpdateQuotaDto = {
+};
+export declare type UpdateQuotaDto = {
     value: number;
     description: string;
     count_title: number;
-}
+};

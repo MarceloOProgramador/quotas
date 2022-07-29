@@ -1,10 +1,14 @@
 import { Injectable } from '@nestjs/common';
-import { CreateQuotaDto } from './dto/create-quota.dto';
-import { UpdateQuotaDto } from './dto/update-quota.dto';
+import { CreateQuotaDto, UpdateQuotaDto } from '../dtos/quota.create.dto';
+import { RepositoryInterface } from "./repositories/repository.interface";
 
 @Injectable()
 export class QuotasService {
-  create(createQuotaDto: CreateQuotaDto) {
+  private repository: RepositoryInterface
+  constructor(repository: RepositoryInterface){};
+
+  create(datas: CreateQuotaDto) {
+    this.repository.create(datas); 
     return 'This action adds a new quota';
   }
 
