@@ -23,14 +23,14 @@ export class QuotasController {
     return this.quotasService.findAll();
   }
 
-  @Get(':id')
+  @Get(':cod')
   findOne(@Param('cod') cod: string) {
-    return this.quotasService.findOne(+cod);
+    return this.quotasService.findOne(cod);
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateQuotaDto: UpdateQuotaDto) {
-    return this.quotasService.update(+id, updateQuotaDto);
+  @Patch(':cod')
+  update(@Param('cod') cod: string, @Body() updateQuotaDto: UpdateQuotaDto) {
+    return this.quotasService.update(cod, updateQuotaDto);
   }
 
   @Delete(':id')

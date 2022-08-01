@@ -27,10 +27,10 @@ let QuotasController = class QuotasController {
         return this.quotasService.findAll();
     }
     findOne(cod) {
-        return this.quotasService.findOne(+cod);
+        return this.quotasService.findOne(cod);
     }
-    update(id, updateQuotaDto) {
-        return this.quotasService.update(+id, updateQuotaDto);
+    update(cod, updateQuotaDto) {
+        return this.quotasService.update(cod, updateQuotaDto);
     }
     remove(id) {
         return this.quotasService.remove(+id);
@@ -50,15 +50,15 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], QuotasController.prototype, "findAll", null);
 __decorate([
-    (0, common_1.Get)(':id'),
+    (0, common_1.Get)(':cod'),
     __param(0, (0, common_1.Param)('cod')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], QuotasController.prototype, "findOne", null);
 __decorate([
-    (0, common_1.Patch)(':id'),
-    __param(0, (0, common_1.Param)('id')),
+    (0, common_1.Patch)(':cod'),
+    __param(0, (0, common_1.Param)('cod')),
     __param(1, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String, Object]),

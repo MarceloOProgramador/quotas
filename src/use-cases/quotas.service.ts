@@ -19,12 +19,16 @@ export class QuotasService {
     return this.repository.findAll();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} quota`;
+  findOne(cod: string) {
+    return this.repository.find(cod);
   }
 
-  update(id: number, updateQuotaDto: UpdateQuotaDto) {
-    return `This action updates a #${id} quota`;
+  update(cod: string, datas: UpdateQuotaDto) {
+
+    return this.repository.update(cod, datas)
+    .then((sucess) =>  {return {"message": sucess, "code": HttpStatus.OK}})
+    .catch((error) => {return {"message": error, "code" :HttpStatus.BAD_REQUEST}});
+
   }
 
   remove(id: number) {

@@ -6,7 +6,13 @@ export declare class QuotasService {
     constructor(repository: RepositoryInterface);
     create(datas: CreateQuotaDto): HttpStatus.CREATED | HttpStatus.INTERNAL_SERVER_ERROR;
     findAll(): Promise<any[]>;
-    findOne(id: number): string;
-    update(id: number, updateQuotaDto: UpdateQuotaDto): string;
+    findOne(cod: string): Promise<any>;
+    update(cod: string, datas: UpdateQuotaDto): Promise<{
+        message: any;
+        code: HttpStatus;
+    } | {
+        message: any;
+        code: HttpStatus;
+    }>;
     remove(id: number): string;
 }

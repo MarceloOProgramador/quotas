@@ -1,5 +1,5 @@
 export interface QuotaDto {
-    id: number;
+    cod: string;
     value: number;
     description: string;
     count_title: number;

@@ -1,5 +1,6 @@
 export type QuotaDTO = {
-    value: number;
+            cod: string;
+          value: number;
     description: string;
     count_title: number;
 }

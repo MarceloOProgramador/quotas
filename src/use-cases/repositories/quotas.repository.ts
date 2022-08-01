@@ -1,35 +1,37 @@
 import { RepositoryInterface } from "./repository.interface";
 import { Quota } from "src/entities/quotas";
-import { quotas, find_all_quotas } from "../mocks/quotas.mocks";
+import { quotas, all_quotas } from "../mocks/quotas.mocks";
+import { QuotaDTO } from "src/dtos/quota.response.dto";
 
 export default class QuotaRepository implements RepositoryInterface {
 
-    async find(cod: string): Promise<any>
-    {
-        
-    }
+  async find(cod: string): Promise<QuotaDTO[]> {
+    return all_quotas.filter(
+      (quota: QuotaDTO) => quota.cod === cod
+    );
+  }
 
-    async findAll(): Promise<any[]>
-    {
-        return find_all_quotas;
-    }
+  async findAll(): Promise<any[]> {
+    return all_quotas;
+  }
 
-    async create(quota: Quota) {
-        const prev_lenght = quotas.length;
-        if(quotas.push(quota) == prev_lenght)
-            false;
-        
-        return true;
-    }
+  async create(quota: Quota) {
+    const prev_lenght = quotas.length;
+    if (quotas.push(quota) == prev_lenght) false;
 
-    async update(cod: string, datas: Object): Promise<any>
-    {
+    return true;
+  }
 
-    }
+  async update(cod: string, datas: QuotaDTO): Promise<any> {
+    const index = all_quotas.findIndex((quota: QuotaDTO) => quota.cod == cod);
 
-    async delete(cod: string): Promise<any>
-    {
+    if(index == -1)
+        return Promise.reject("Erro ao atualizar!");
+    
+    quotas[index] = datas;
 
-    }
+    return Promise.resolve("Atualizado com sucesso!");
+  }
 
+  async delete(cod: string): Promise<any> {}
 }

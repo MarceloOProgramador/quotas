@@ -24,11 +24,13 @@ let QuotasService = class QuotasService {
     findAll() {
         return this.repository.findAll();
     }
-    findOne(id) {
-        return `This action returns a #${id} quota`;
+    findOne(cod) {
+        return this.repository.find(cod);
     }
-    update(id, updateQuotaDto) {
-        return `This action updates a #${id} quota`;
+    update(cod, datas) {
+        return this.repository.update(cod, datas)
+            .then((sucess) => { return { "message": sucess, "code": common_1.HttpStatus.OK }; })
+            .catch((error) => { return { "message": error, "code": common_1.HttpStatus.BAD_REQUEST }; });
     }
     remove(id) {
         return `This action removes a #${id} quota`;

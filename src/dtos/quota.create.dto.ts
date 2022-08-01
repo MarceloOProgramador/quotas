@@ -1,11 +1,12 @@
 export type CreateQuotaDto = {
-    value: number;
+          value: number;
     description: string;
     count_title: number;
 }
 
 export type UpdateQuotaDto = {
-    value: number;
+            cod: string;
+          value: number;
     description: string;
     count_title: number;
 }

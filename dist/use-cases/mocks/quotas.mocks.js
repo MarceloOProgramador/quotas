@@ -1,22 +1,22 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.find_all_quotas = exports.quotas = void 0;
+exports.all_quotas = exports.quotas = void 0;
 exports.quotas = [];
-exports.find_all_quotas = [
+exports.all_quotas = [
     {
-        "id": 1,
+        "cod": '1',
         "value": 100.00,
         "description": "quota 01",
         "count_title": 10
     },
     {
-        "id": 2,
+        "cod": '2',
         "value": 500.00,
         "description": "quota 02",
         "count_title": 5
     },
     {
-        "id": 3,
+        "cod": '3',
         "value": 300.00,
         "description": "quota 03",
         "count_title": 15
