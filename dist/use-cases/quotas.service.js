@@ -22,7 +22,7 @@ let QuotasService = class QuotasService {
         return common_1.HttpStatus.CREATED;
     }
     findAll() {
-        return `This action returns all quotas`;
+        return this.repository.findAll();
     }
     findOne(id) {
         return `This action returns a #${id} quota`;

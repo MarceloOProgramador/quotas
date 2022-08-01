@@ -4,7 +4,7 @@ export declare class QuotasController {
     private quotasService;
     constructor();
     create(createQuotaDto: CreateQuotaDto): import("@nestjs/common").HttpStatus.CREATED | import("@nestjs/common").HttpStatus.INTERNAL_SERVER_ERROR;
-    findAll(): string;
+    findAll(): Promise<any[]>;
     findOne(cod: string): string;
     update(id: string, updateQuotaDto: UpdateQuotaDto): string;
     remove(id: string): string;

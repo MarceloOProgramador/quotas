@@ -5,7 +5,7 @@ export declare class QuotasService {
     private repository;
     constructor(repository: RepositoryInterface);
     create(datas: CreateQuotaDto): HttpStatus.CREATED | HttpStatus.INTERNAL_SERVER_ERROR;
-    findAll(): string;
+    findAll(): Promise<any[]>;
     findOne(id: number): string;
     update(id: number, updateQuotaDto: UpdateQuotaDto): string;
     remove(id: number): string;

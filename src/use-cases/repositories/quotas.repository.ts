@@ -1,6 +1,6 @@
 import { RepositoryInterface } from "./repository.interface";
 import { Quota } from "src/entities/quotas";
-import { quotas } from "../mocks/quotas.mocks";
+import { quotas, find_all_quotas } from "../mocks/quotas.mocks";
 
 export default class QuotaRepository implements RepositoryInterface {
 
@@ -11,7 +11,7 @@ export default class QuotaRepository implements RepositoryInterface {
 
     async findAll(): Promise<any[]>
     {
-        return [];
+        return find_all_quotas;
     }
 
     async create(quota: Quota) {

@@ -5,7 +5,7 @@ class QuotaRepository {
     async find(cod) {
     }
     async findAll() {
-        return [];
+        return quotas_mocks_1.find_all_quotas;
     }
     async create(quota) {
         const prev_lenght = quotas_mocks_1.quotas.length;

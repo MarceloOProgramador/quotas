@@ -16,7 +16,7 @@ export class QuotasService {
   }
 
   findAll() {
-    return `This action returns all quotas`;
+    return this.repository.findAll();
   }
 
   findOne(id: number) {
