@@ -13,5 +13,11 @@ export declare class QuotasController {
         message: any;
         code: import("@nestjs/common").HttpStatus;
     }>;
-    remove(id: string): string;
+    remove(cod: string): Promise<{
+        message: any;
+        code: import("@nestjs/common").HttpStatus;
+    } | {
+        message: any;
+        code: import("@nestjs/common").HttpStatus;
+    }>;
 }

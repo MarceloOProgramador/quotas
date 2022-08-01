@@ -14,5 +14,11 @@ export declare class QuotasService {
         message: any;
         code: HttpStatus;
     }>;
-    remove(id: number): string;
+    remove(cod: string): Promise<{
+        message: any;
+        code: HttpStatus;
+    } | {
+        message: any;
+        code: HttpStatus;
+    }>;
 }

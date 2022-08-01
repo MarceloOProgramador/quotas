@@ -23,7 +23,7 @@ export default class QuotaRepository implements RepositoryInterface {
   }
 
   async update(cod: string, datas: QuotaDTO): Promise<any> {
-    const index = all_quotas.findIndex((quota: QuotaDTO) => quota.cod == cod);
+    const index = all_quotas.findIndex((quota: QuotaDTO) => quota.cod === cod);
 
     if(index == -1)
         return Promise.reject("Erro ao atualizar!");
@@ -33,5 +33,14 @@ export default class QuotaRepository implements RepositoryInterface {
     return Promise.resolve("Atualizado com sucesso!");
   }
 
-  async delete(cod: string): Promise<any> {}
+  async delete(cod: string): Promise<any> {
+
+    const index = all_quotas.findIndex((quota: QuotaDTO) => quota.cod === cod);
+    const deleted = all_quotas.splice(index, 1);
+
+    if(index == -1 || !deleted)
+      return Promise.reject("Erro ao deletar!");
+
+    return Promise.resolve("Deletado com sucesso!");
+  }
 }

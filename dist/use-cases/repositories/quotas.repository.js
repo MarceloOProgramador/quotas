@@ -15,13 +15,19 @@ class QuotaRepository {
         return true;
     }
     async update(cod, datas) {
-        const index = quotas_mocks_1.all_quotas.findIndex((quota) => quota.cod == cod);
+        const index = quotas_mocks_1.all_quotas.findIndex((quota) => quota.cod === cod);
         if (index == -1)
             return Promise.reject("Erro ao atualizar!");
         quotas_mocks_1.quotas[index] = datas;
         return Promise.resolve("Atualizado com sucesso!");
     }
-    async delete(cod) { }
+    async delete(cod) {
+        const index = quotas_mocks_1.all_quotas.findIndex((quota) => quota.cod === cod);
+        const deleted = quotas_mocks_1.all_quotas.splice(index, 1);
+        if (index == -1 || !deleted)
+            return Promise.reject("Erro ao deletar!");
+        return Promise.resolve("Deletado com sucesso!");
+    }
 }
 exports.default = QuotaRepository;
 //# sourceMappingURL=quotas.repository.js.map

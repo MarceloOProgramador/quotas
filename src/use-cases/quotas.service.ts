@@ -31,7 +31,9 @@ export class QuotasService {
 
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} quota`;
+  remove(cod: string) {
+    return this.repository.delete(cod)
+    .then((sucess) =>  {return {"message": sucess, "code": HttpStatus.OK}})
+    .catch((error) => {return {"message": error, "code" :HttpStatus.BAD_REQUEST}});
   }
 }

@@ -33,8 +33,8 @@ export class QuotasController {
     return this.quotasService.update(cod, updateQuotaDto);
   }
 
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.quotasService.remove(+id);
+  @Delete(':cod')
+  remove(@Param('cod') cod: string) {
+    return this.quotasService.remove(cod);
   }
 }

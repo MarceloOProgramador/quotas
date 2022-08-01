@@ -32,8 +32,8 @@ let QuotasController = class QuotasController {
     update(cod, updateQuotaDto) {
         return this.quotasService.update(cod, updateQuotaDto);
     }
-    remove(id) {
-        return this.quotasService.remove(+id);
+    remove(cod) {
+        return this.quotasService.remove(cod);
     }
 };
 __decorate([
@@ -65,8 +65,8 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], QuotasController.prototype, "update", null);
 __decorate([
-    (0, common_1.Delete)(':id'),
-    __param(0, (0, common_1.Param)('id')),
+    (0, common_1.Delete)(':cod'),
+    __param(0, (0, common_1.Param)('cod')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)

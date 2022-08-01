@@ -32,8 +32,10 @@ let QuotasService = class QuotasService {
             .then((sucess) => { return { "message": sucess, "code": common_1.HttpStatus.OK }; })
             .catch((error) => { return { "message": error, "code": common_1.HttpStatus.BAD_REQUEST }; });
     }
-    remove(id) {
-        return `This action removes a #${id} quota`;
+    remove(cod) {
+        return this.repository.delete(cod)
+            .then((sucess) => { return { "message": sucess, "code": common_1.HttpStatus.OK }; })
+            .catch((error) => { return { "message": error, "code": common_1.HttpStatus.BAD_REQUEST }; });
     }
 };
 QuotasService = __decorate([
