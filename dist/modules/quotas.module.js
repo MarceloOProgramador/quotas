@@ -8,14 +8,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.QuotasModule = void 0;
 const common_1 = require("@nestjs/common");
-const quotas_service_1 = require("../use-cases/quotas.service");
 const quotas_controller_1 = require("../controllers/quotas.controller");
 let QuotasModule = class QuotasModule {
 };
 QuotasModule = __decorate([
     (0, common_1.Module)({
         controllers: [quotas_controller_1.QuotasController],
-        providers: [quotas_service_1.QuotasService]
+        providers: []
     })
 ], QuotasModule);
 exports.QuotasModule = QuotasModule;

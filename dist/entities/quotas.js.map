@@ -1,1 +1,1 @@
-{"version":3,"file":"quotas.js","sourceRoot":"","sources":["../../src/entities/quotas.ts"],"names":[],"mappings":";;;AAAA,MAAa,KAAK;CAIjB;AAJD,sBAIC"}
+{"version":3,"file":"quotas.js","sourceRoot":"","sources":["../../src/entities/quotas.ts"],"names":[],"mappings":";;;AAEA,MAAa,KAAK;IAKd,YACI,KAAe;QAEf,IAAI,CAAC,KAAK,GAAG,KAAK,CAAC,KAAK,CAAC;QACzB,IAAI,CAAC,WAAW,GAAG,KAAK,CAAC,WAAW,CAAC;QACrC,IAAI,CAAC,WAAW,GAAG,KAAK,CAAC,WAAW,CAAC;IACzC,CAAC;CAEJ;AAbD,sBAaC"}

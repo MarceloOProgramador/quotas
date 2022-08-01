@@ -1,15 +1,18 @@
-import { Injectable } from '@nestjs/common';
+import { HttpStatus, Injectable } from '@nestjs/common';
 import { CreateQuotaDto, UpdateQuotaDto } from '../dtos/quota.create.dto';
 import { RepositoryInterface } from "./repositories/repository.interface";
 
 @Injectable()
 export class QuotasService {
-  private repository: RepositoryInterface
-  constructor(repository: RepositoryInterface){};
+
+  constructor(private repository: RepositoryInterface){};
 
   create(datas: CreateQuotaDto) {
-    this.repository.create(datas); 
-    return 'This action adds a new quota';
+
+    if(!this.repository.create(datas))
+      return HttpStatus.INTERNAL_SERVER_ERROR;
+
+    return HttpStatus.CREATED;
   }
 
   findAll() {

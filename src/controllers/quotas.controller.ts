@@ -7,12 +7,10 @@ import QuotaRepository from 'src/use-cases/repositories/quotas.repository';
 @Controller('quotas')
 
 export class QuotasController {
-  ;
+  private quotasService: QuotasService
 
-  constructor(
-    private quotasService: QuotasService
-  ) {
-    this.quotasService = new QuotasService(new QuotaRepository)
+  constructor() {
+    this.quotasService = new QuotasService(new QuotaRepository);
   }
 
   @Post()

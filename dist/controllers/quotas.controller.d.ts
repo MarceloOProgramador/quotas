@@ -1,10 +1,9 @@
-import { QuotasService } from '../use-cases/quotas.service';
 import { CreateQuotaDto } from '../dtos/quota.create.dto';
 import { UpdateQuotaDto } from '../dtos/quota.create.dto';
 export declare class QuotasController {
-    private readonly quotasService;
-    constructor(quotasService: QuotasService);
-    create(createQuotaDto: CreateQuotaDto): string;
+    private quotasService;
+    constructor();
+    create(createQuotaDto: CreateQuotaDto): import("@nestjs/common").HttpStatus.CREATED | import("@nestjs/common").HttpStatus.INTERNAL_SERVER_ERROR;
     findAll(): string;
     findOne(cod: string): string;
     update(id: string, updateQuotaDto: UpdateQuotaDto): string;

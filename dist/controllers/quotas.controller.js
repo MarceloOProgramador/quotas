@@ -15,12 +15,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.QuotasController = void 0;
 const common_1 = require("@nestjs/common");
 const quotas_service_1 = require("../use-cases/quotas.service");
+const quotas_repository_1 = require("../use-cases/repositories/quotas.repository");
 let QuotasController = class QuotasController {
-    constructor(quotasService) {
-        this.quotasService = quotasService;
+    constructor() {
+        this.quotasService = new quotas_service_1.QuotasService(new quotas_repository_1.default);
     }
     create(createQuotaDto) {
-        return "creating";
+        return this.quotasService.create(createQuotaDto);
     }
     findAll() {
         return this.quotasService.findAll();
@@ -72,7 +73,7 @@ __decorate([
 ], QuotasController.prototype, "remove", null);
 QuotasController = __decorate([
     (0, common_1.Controller)('quotas'),
-    __metadata("design:paramtypes", [quotas_service_1.QuotasService])
+    __metadata("design:paramtypes", [])
 ], QuotasController);
 exports.QuotasController = QuotasController;
 //# sourceMappingURL=quotas.controller.js.map
