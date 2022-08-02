@@ -2,9 +2,9 @@
 
 
 ### Requisitos funcionais
-- O sistema deve cadastrar uma parcela;
+- O sistema deve permitir o usuário cadastrar uma parcela;
 - O sistema deve permitir atualizar uma parcela utilizando seu código;
-- O sistema deve o usuário listar todas as parcelas
+- O sistema deve permitir o usuário listar todas as parcelas
 - O sistema deve mostrar ao usuário uma parcela utilizando o código;
 - O sistema deve permitir o usuário deletar uma parcela utilizando o código.
 
@@ -13,7 +13,7 @@
 - O sistema deve utilizar a tecnologia NESTJS como framework para o desenvolvimento dessa api.
 ### Como instalar o projeto
 `
-    
+
 `
 
 ### Link da documentação da api
