@@ -10,11 +10,7 @@
 
 ### Requisitos não funcionais
 - O sistema deve disponibilizar rotas HTTP utilizando uma RESTFUL API;
-- O sistema deve utilizar a tecnologia NESTJS como framework para o desenvolvimento dessa api.
-### Como instalar o projeto
-`
-
-`
+- O sistema deve utilizar a tecnologia NESTJS como framework para o desenvolvimento dessa api;
 
 ### Link da documentação da api
 
