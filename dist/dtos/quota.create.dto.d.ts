@@ -1,11 +1,11 @@
-export declare type CreateQuotaDto = {
+export declare class CreateQuotaDto {
     value: number;
     description: string;
     count_title: number;
-};
-export declare type UpdateQuotaDto = {
+}
+export declare class UpdateQuotaDto {
     cod: string;
     value: number;
     description: string;
     count_title: number;
-};
+}

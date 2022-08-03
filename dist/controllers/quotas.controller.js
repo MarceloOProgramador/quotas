@@ -15,6 +15,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.QuotasController = void 0;
 const common_1 = require("@nestjs/common");
 const quotas_service_1 = require("../use-cases/quotas.service");
+const quota_create_dto_1 = require("../dtos/quota.create.dto");
+const quota_create_dto_2 = require("../dtos/quota.create.dto");
 const quotas_repository_1 = require("../use-cases/repositories/quotas.repository");
 let QuotasController = class QuotasController {
     constructor() {
@@ -40,7 +42,7 @@ __decorate([
     (0, common_1.Post)(),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
+    __metadata("design:paramtypes", [quota_create_dto_1.CreateQuotaDto]),
     __metadata("design:returntype", void 0)
 ], QuotasController.prototype, "create", null);
 __decorate([
@@ -61,7 +63,7 @@ __decorate([
     __param(0, (0, common_1.Param)('cod')),
     __param(1, (0, common_1.Body)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String, Object]),
+    __metadata("design:paramtypes", [String, quota_create_dto_2.UpdateQuotaDto]),
     __metadata("design:returntype", void 0)
 ], QuotasController.prototype, "update", null);
 __decorate([
